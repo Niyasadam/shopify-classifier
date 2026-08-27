@@ -55,12 +55,13 @@ def pg(title, body):
     n = "<nav class='nb'><b>Shopify Taxonomy Classifier</b>"
     n += "<a href='/' class='on'>Dashboard</a>" if "Dashboard" in title else "<a href='/'>Dashboard</a>"
     n += "<a href='/products' class='on'>Products</a>" if "Products" in title and "Detail" not in title else "<a href='/products'>Products</a>" if "Detail" not in title else "<a href='/products'>Products</a>"
-    n += "<a href='/api/stats' target='_blank'>API</a></nav>"
+    n += "</nav>"
     return f"<!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1.0'><title>{title}</title><style>{CSS}</style></head><body>{n}<div class='wr'>{body}</div></body></html>"
 
 def badge(status):
     m = {"approved":"bsg","needs_review":"bwy","rejected":"bdr"}
-    return f"<span class='{m.get(status,"binf")}'>{status}</span>"
+    cls = m.get(status, "binf")
+    return f"<span class='{cls}'>{status}</span>"
 
 def confcls(c):
     return "cw" if c>=0.7 else ("cm" if c>=0.4 else "cl")
