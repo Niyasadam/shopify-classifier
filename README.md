@@ -34,8 +34,8 @@ A Python web application that automatically detects Shopify Product Taxonomy cat
 
 ```bash
 # Clone the repo
-git clone https://github.com/niyas-adam/shopify-taxonomy-classifier
-cd shopify-taxonomy-classifier
+git clone https://github.com/Niyasadam/shopify-classifier.git
+cd shopify-classifier
 
 # Install dependencies
 pip install -r requirements.txt
@@ -214,20 +214,6 @@ bullets, product_dimensions, product_url
 3. Build: `pip install -r requirements.txt`
 4. Start: `gunicorn app:app --bind 0.0.0.0:$PORT`
 5. Upload your product file via `/import`
-
----
-
-## Standalone Import Script
-
-```bash
-# From XLSX
-python import_xlsx.py "Product List.xlsx" ./output 250
-
-# From CSV
-python import_xlsx.py products.csv ./output 250
-```
-
-Creates `seed_chunk_*.json` files with classified products.
 
 ---
 
