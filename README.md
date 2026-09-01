@@ -54,7 +54,6 @@ python app.py
 ```
 shopify-classifier/
 ├── app.py              # Flask app (routes, classifier, API, UI)
-├── import_xlsx.py      # Standalone import/classify script
 ├── requirements.txt    # flask, gunicorn
 ├── Procfile            # Render deployment config
 ├── db.sqlite3          # SQLite database (auto-created)
