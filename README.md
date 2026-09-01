@@ -33,6 +33,10 @@ A Python web application that automatically detects Shopify Product Taxonomy cat
 ## Quick Start
 
 ```bash
+# Clone the repo
+git clone https://github.com/Niyasadam/shopify-classifier.git
+cd shopify-classifier
+
 # Install dependencies
 pip install -r requirements.txt
 
